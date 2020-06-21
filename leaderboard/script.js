@@ -2,7 +2,7 @@ var table = document.getElementById("leaderboard");
 var table2 = document.getElementById("leaderboard2");
 var table3 = document.getElementById("leaderboard3");
 const url =
-  'https://api2.hackclub.com/v0.1/Summer%20of%20Making%20Streaks/Slack%20Accounts?select={"maxRecords": 16,"fields":["Username","Streak Count"],"sort":[{"field": "Streak Count", "direction": "desc"}]}';
+  'https://api2.hackclub.com/v0.1/Summer%20of%20Making%20Streaks/Slack%20Accounts?select={"maxRecords": 32,"fields":["Username","Streak Count"],"sort":[{"field": "Streak Count", "direction": "desc"}]}';
 fetch(url)
   .then(resp => resp.json())
   .then(function(data) {
