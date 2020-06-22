@@ -190,7 +190,7 @@ body {
 #write {
     max-width: 860px;
     margin: 0 auto;
-    padding: 100px 60px;
+    padding: 40px 60px;
 }
 @media only screen and (min-width: 1400px) {
   #write {
