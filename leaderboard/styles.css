@@ -50,12 +50,13 @@ body {
   position: relative;
   white-space: normal;
   overflow-x: visible;
-  padding-top: 40px;
+  padding-top: 70px;
 }
 @media screen and (max-width: 500px) {
   #write {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top : 70px;
   }
 }
 *,
@@ -187,10 +188,9 @@ body {
   line-height: 1.6;
 }
 #write {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 30px;
-  padding-bottom: 100px;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 100px 60px;
 }
 @media only screen and (min-width: 1400px) {
   #write {
@@ -298,4 +298,20 @@ a:hover {
 figure {
   border-radius: 30px;
   border: 3px solid #dfe2e5;
+}
+
+td{
+    white-space: nowrap;
+}
+
+figure{
+    overflow: scroll;
+}
+
+figure::-webkit-scrollbar {
+  display: none;
+}
+
+div.center{
+    text-align: center;
 }
