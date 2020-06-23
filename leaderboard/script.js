@@ -27,7 +27,12 @@ fetch(url)
           "@" +
           data[i]["fields"]["Username"] +
           "</a>";
-        cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
+        if (data[i]["fields"]["Streak Count"] >= 8){
+          cell2.innerHTML = "🔥 " + "7+";
+        }
+        else{
+          cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
+        } 
         cell2.style.borderLeftWidth = "0px";
       }
       if (i > rowNo - 1) {
@@ -43,7 +48,12 @@ fetch(url)
           "@" +
           data[i]["fields"]["Username"] +
           "</a>";
-        cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
+        if (data[i]["fields"]["Streak Count"] >= 8){
+          cell2.innerHTML = "🔥 " + "7+";
+        }
+        else{
+          cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
+        } 
         cell2.style.borderLeftWidth = "0px";
       }
 
@@ -59,7 +69,12 @@ fetch(url)
         "@" +
         data[i]["fields"]["Username"] +
         "</a>";
-      cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
+      if (data[i]["fields"]["Streak Count"] >= 8){
+        cell2.innerHTML = "🔥 " + "7+";
+      }
+      else{
+        cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
+      }  
       cell2.style.borderLeftWidth = "0px";
     }
     console.log(data[0]);
