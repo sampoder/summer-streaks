@@ -48,7 +48,7 @@ fetch(url)
           "@" +
           data[i]["fields"]["Username"] +
           "</a>";
-        if (data[i]["fields"]["Streak Count"] >= 8){
+        if (data[i]["fields"]["Max Streaks"] >= 8){
           cell2.innerHTML = "🔥 " + "7+";
         }
         else{
