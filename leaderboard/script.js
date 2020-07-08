@@ -2,7 +2,7 @@ var table = document.getElementById("leaderboard");
 var table2 = document.getElementById("leaderboard2");
 var table3 = document.getElementById("leaderboard3");
 const url =
-  'https://api2.hackclub.com/v0.1/Summer%20of%20Making%20Streaks/Slack%20Accounts?select={"maxRecords": 32,"fields":["Username","Streak Count"],"sort":[{"field": "Streak Count", "direction": "desc"}]}';
+  'https://api2.hackclub.com/v0.1/Summer%20of%20Making%20Streaks/Slack%20Accounts?select={"maxRecords": 32,"fields":["Username","Max Streaks"],"sort":[{"field": "Streak Count", "direction": "desc"}]}';
 fetch(url)
   .then(resp => resp.json())
   .then(function(data) {
@@ -27,12 +27,7 @@ fetch(url)
           "@" +
           data[i]["fields"]["Username"] +
           "</a>";
-        if (data[i]["fields"]["Streak Count"] >= 8){
-          cell2.innerHTML = "🔥 " + "7+";
-        }
-        else{
-          cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
-        } 
+        cell2.innerHTML = "🔥 " + data[i]["fields"]["Max Streaks"];
         cell2.style.borderLeftWidth = "0px";
       }
       if (i > rowNo - 1) {
@@ -48,12 +43,7 @@ fetch(url)
           "@" +
           data[i]["fields"]["Username"] +
           "</a>";
-        if (data[i]["fields"]["Streak Count"] >= 8){
-          cell2.innerHTML = "🔥 " + "7+";
-        }
-        else{
-          cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
-        } 
+        cell2.innerHTML = "🔥 " + data[i]["fields"]["Max Streaks"];
         cell2.style.borderLeftWidth = "0px";
       }
 
@@ -69,12 +59,7 @@ fetch(url)
         "@" +
         data[i]["fields"]["Username"] +
         "</a>";
-      if (data[i]["fields"]["Streak Count"] >= 8){
-        cell2.innerHTML = "🔥 " + "7+";
-      }
-      else{
-        cell2.innerHTML = "🔥 " + data[i]["fields"]["Streak Count"];
-      }  
+      cell2.innerHTML = "🔥 " + data[i]["fields"]["Max Streaks"];
       cell2.style.borderLeftWidth = "0px";
     }
     console.log(data[0]);
