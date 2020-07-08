@@ -27,12 +27,7 @@ fetch(url)
           "@" +
           data[i]["fields"]["Username"] +
           "</a>";
-        if (data[i]["fields"]["Max Streaks"] >= 8){
-          cell2.innerHTML = "🔥 " + "7+";
-        }
-        else{
-          cell2.innerHTML = "🔥 " + data[i]["fields"]["Max Streaks"];
-        } 
+        cell2.innerHTML = "🔥 " + data[i]["fields"]["Max Streaks"];
         cell2.style.borderLeftWidth = "0px";
       }
       if (i > rowNo - 1) {
